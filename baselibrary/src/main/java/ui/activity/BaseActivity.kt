@@ -1,6 +1,8 @@
 package ui.activity
 
 
-
-class BaseActivity {
+/**
+ * 静态加载的baseActivity
+ * */
+open class BaseActivity {
 }

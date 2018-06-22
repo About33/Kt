@@ -9,9 +9,10 @@ import kotlinx.android.synthetic.main.activity_regist.*
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.toast
 import org.jetbrains.anko.tvView
+import ui.activity.BaseMvpActivity
 
 
-class RegistActivity : AppCompatActivity() {
+class RegistActivity : AppCompatActivity {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
