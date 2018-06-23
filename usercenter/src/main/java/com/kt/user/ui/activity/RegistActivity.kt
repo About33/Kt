@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import com.kt.user.R
+import injection.component.DaggerUserComponent
 
 import injection.moudle.UserMoulder
 import kotlinx.android.synthetic.main.activity_regist.*
@@ -41,7 +42,7 @@ class RegistActivity : BaseMvpActivity<RegisterPresenter>(), RegiststerView {
     }
 
     private fun initInjection() {
-//        DaggerUserComponent.builder().userMoulder(UserMoulder()).build().inject(this)
+    DaggerUserComponent.builder().activityCmponent(activityComponent).userMoulder(UserMoulder()).build().inject(this)
         mPresenter.mView = this;
 
     }
