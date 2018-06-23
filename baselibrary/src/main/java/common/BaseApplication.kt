@@ -17,9 +17,7 @@ class BaseApplication: Application() {
     }
 
     private fun initAppInjection() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-
-        appCmponent =    DaggerAppCmponent.builder().appMoudle(AppMoudle(this)).build()
+       appCmponent =      DaggerAppCmponent.builder().appMoudle(AppMoudle(this)).build()
 
     }
 }

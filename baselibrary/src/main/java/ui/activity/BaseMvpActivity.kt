@@ -10,7 +10,7 @@ import injection.component.DaggerActivityCmponent
 import injection.module.ActivityMoudle
 import javax.inject.Inject
 
-open class BaseMvpActivity<T : BasePresenter<*>> : BaseActivity(), BaseView {
+open class   BaseMvpActivity<T : BasePresenter<*>> : BaseActivity(), BaseView {
     override fun showLoding() {
 
     }
