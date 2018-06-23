@@ -15,8 +15,8 @@ import ui.activity.BaseMvpActivity
 
 
 class RegistActivity : BaseMvpActivity<RegisterPresenter>(), RegiststerView {
-    override fun OnRegisterResult(result: Boolean) {
-        toast("成功")
+    override fun onregistresult(result: Boolean) {
+        toast("注册成功")
     }
 
 
@@ -27,7 +27,7 @@ class RegistActivity : BaseMvpActivity<RegisterPresenter>(), RegiststerView {
         mPresenter.mView = this;
 
         register.setOnClickListener {
-            mPresenter.Reister("", "")
+            mPresenter.register("", "", "")
 
 
         }
