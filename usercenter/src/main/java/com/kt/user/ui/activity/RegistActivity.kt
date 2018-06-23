@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import com.kt.user.R
+
+import injection.moudle.UserMoulder
 import kotlinx.android.synthetic.main.activity_regist.*
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.toast
@@ -23,8 +25,11 @@ class RegistActivity : BaseMvpActivity<RegisterPresenter>(), RegiststerView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_regist)
-        mPresenter = RegisterPresenter()
-        mPresenter.mView = this;
+
+
+        initInjection()
+
+
 
         register.setOnClickListener {
             mPresenter.register("", "", "")
@@ -32,6 +37,12 @@ class RegistActivity : BaseMvpActivity<RegisterPresenter>(), RegiststerView {
 
         }
 
+
+    }
+
+    private fun initInjection() {
+//        DaggerUserComponent.builder().userMoulder(UserMoulder()).build().inject(this)
+        mPresenter.mView = this;
 
     }
 

@@ -10,6 +10,10 @@ buildscript {
     //网络请求
     ext.ok_http_version = '3.4.1'
     ext.retrofit_version = '2.1.0'
+    //注入daggar2
+    ext.dagger_version = '2.11'
+
+
 
 
     repositories {
