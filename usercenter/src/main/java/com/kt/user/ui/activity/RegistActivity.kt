@@ -43,9 +43,13 @@ class RegistActivity : BaseMvpActivity<RegisterPresenter>(), RegiststerView {
 
     private fun initInjection() {
     DaggerUserComponent.builder().activityCmponent(activityComponent).userMoulder(UserMoulder()).build().inject(this)
-        mPresenter.mView = this;
+        mPresenter.mView = this
+
+
 
     }
+
+
 
 }
 
